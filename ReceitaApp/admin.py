@@ -7,7 +7,7 @@ class CategoriaAdmin(admin.ModelAdmin):
     list_filter = ["nome"]
 
 class ReceitaAdmin(admin.ModelAdmin):
-    list_display = ['nome']
+    list_display = ['nome', 'ingredientes', 'modo_de_preparo']
     list_display_links = ['nome']
 
 admin.site.register(Categoria, CategoriaAdmin)
