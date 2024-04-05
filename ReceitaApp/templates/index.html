@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="pr-br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <div>Pagina inicial</div> 
-    <a href="/receitas">Pagina de Receitas</a>   
+    <div>Página inicial</div>
+    <a href="/receitas">Página de receitas</a>
+ 
+    <ul>
+        {% for categoria in categorias %}
+                <li>{{ categoria.nome }}</li>
+        {% endfor %}
+    </ul>
+ 
 </body>
 </html>

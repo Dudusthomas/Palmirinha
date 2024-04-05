@@ -6,16 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Receitas da Palmirinha!</h1>  
-    Endereço do nome {{ nome }} <br>
-    {{ Endereco }}, {{ Bairro }} - {{ Cidade }} - {{ Estado }}
-    <div>
-        Ingredientes:
+<h1>Receitas da Palmirinha!</h1>
         <ul>
-            {% for ing in Ingredientes %}
-                <li>{{ ing }}</li>
+            {% for receita in receitas %}
+            <li><a href="/receita/{{ receita.id }}"> {{ receita.nome }}></a>{{ receita.nome }} ({{ receita.grau_de_dificuldade }})</li>
             {% endfor %}
         </ul>
-    </div>
 </body>
 </html>
